@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Modern.Models
 {
@@ -6,5 +7,6 @@ namespace Modern.Models
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
+        public List<Car> Cars { get; set; }
     }
 }
