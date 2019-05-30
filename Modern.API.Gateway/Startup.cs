@@ -5,6 +5,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using GraphQL;
 using GraphiQl;
+using Modern.API.Gateway.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace Modern.API.Gateway
 {
@@ -21,6 +23,11 @@ namespace Modern.API.Gateway
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddDbContext<ApplicationDbContext>(context =>
+            {
+                context.UseInMemoryDatabase("Modern");
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

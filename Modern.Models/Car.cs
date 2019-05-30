@@ -9,6 +9,6 @@ namespace Modern.Models
         public DateTime Created { get; set; }
         public EngineInfo Engine { get; set; }
 
-        public Manufacturer Manufacturer { get; set; }
+        public Guid ManufacturerId { get; set; }
     }
 }

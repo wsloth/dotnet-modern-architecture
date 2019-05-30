@@ -20,5 +20,6 @@
     <Folder Include="GraphQL\" />
     <Folder Include="GraphQL\Types\" />
     <Folder Include="GraphQL\Queries\" />
+    <Folder Include="Data\" />
   </ItemGroup>
 </Project>

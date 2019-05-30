@@ -2,6 +2,8 @@
 using GraphQL;
 using GraphQL.Types;
 using Microsoft.AspNetCore.Mvc;
+using Modern.API.Gateway.Data;
+using Modern.API.Gateway.GraphQL.Queries;
 using Newtonsoft.Json.Linq;
 
 namespace Modern.API.Gateway.Controllers
@@ -15,9 +17,13 @@ namespace Modern.API.Gateway.Controllers
     }
 
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     public class GraphQLController : Controller
     {
+        private ApplicationDbContext Db { get; }
+
+        public GraphQLController(ApplicationDbContext db) => Db = db;
+             
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] GraphQLQuery query)
         {
@@ -25,7 +31,7 @@ namespace Modern.API.Gateway.Controllers
 
             var schema = new Schema
             {
-                Query = new AuthorQuery(_db)
+                Query = new ManufacturerQuery(Db)
             };
 
             var result = await new DocumentExecuter().ExecuteAsync(_ =>
@@ -38,7 +44,7 @@ namespace Modern.API.Gateway.Controllers
 
             if (result.Errors?.Count > 0)
             {
-                return BadRequest();
+                return BadRequest(result.Errors);
             }
 
             return Ok(result);
