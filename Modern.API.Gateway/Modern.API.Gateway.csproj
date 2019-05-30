@@ -16,6 +16,9 @@
     <ProjectReference Include="..\Modern.Models\Modern.Models.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Api\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="GraphQL\" />
+    <Folder Include="GraphQL\Types\" />
+    <Folder Include="GraphQL\Queries\" />
   </ItemGroup>
 </Project>
