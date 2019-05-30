@@ -1,9 +1,23 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modern.API.Gateway", "Modern.API.Gateway\Modern.API.Gateway.csproj", "{B08A29F2-F13C-4751-9F52-A98E1401B9DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modern.Models", "Modern.Models\Modern.Models.csproj", "{8CE1D6AA-F88C-499B-A09E-FD6319AB3377}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B08A29F2-F13C-4751-9F52-A98E1401B9DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B08A29F2-F13C-4751-9F52-A98E1401B9DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B08A29F2-F13C-4751-9F52-A98E1401B9DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B08A29F2-F13C-4751-9F52-A98E1401B9DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CE1D6AA-F88C-499B-A09E-FD6319AB3377}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CE1D6AA-F88C-499B-A09E-FD6319AB3377}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CE1D6AA-F88C-499B-A09E-FD6319AB3377}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CE1D6AA-F88C-499B-A09E-FD6319AB3377}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
