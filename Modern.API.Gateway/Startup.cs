@@ -45,7 +45,7 @@ namespace Modern.API.Gateway
 
             app.UseHttpsRedirection();
             app.UseMvc();
-            app.UseGraphiQl("/graphql");
+            app.UseGraphiQl("/docs/graphql", "/api/graphql");
         }
     }
 }

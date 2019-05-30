@@ -17,13 +17,25 @@ namespace Modern.API.Gateway.Controllers
     }
 
     [ApiController]
-    [Route("[controller]")]
+    [Route("/api/graphql")]
     public class GraphQLController : Controller
     {
         private ApplicationDbContext Db { get; }
 
         public GraphQLController(ApplicationDbContext db) => Db = db;
-             
+
+        /// <summary>
+        /// Query:
+        /// manufacturers {
+        ///    id
+        ///    name
+        ///    cars {
+        ///      name
+        ///      created
+        ///      manufacturerId
+        ///    }
+        ///}
+        /// </summary>
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] GraphQLQuery query)
         {
